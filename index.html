@@ -130,7 +130,8 @@ nav {
 .cards-scroll-section { background:#0d0d0a; padding:0 6vw; }
 .cards-container {
   display:flex; justify-content:space-between; align-items:flex-start;
-  min-height:500vh; flex-direction:row-reverse;
+  min-height:600vh; /* تم تحديثه من 500 ليتناسب مع 5 مشاريع */
+  flex-direction:row-reverse;
 }
 .cards-left { width:55%; }
 .cards-right {
@@ -156,10 +157,13 @@ nav {
 }
 .card-link:hover { gap:1rem; }
 .card-num { position:absolute; bottom:1.5rem; left:1.8rem; font-family:'Amiri',serif; font-size:5rem; font-weight:700; opacity:.1; line-height:1; direction:ltr; }
+
+/* ألوان البطاقات */
 .card-inner.c1 { background:#e8ddd0; color:#2a2520; }
 .card-inner.c2 { background:#c4b49a; color:#1a1510; transform:rotate(-3deg); }
 .card-inner.c3 { background:#3a6e8f; color:#e8f0f5; transform:rotate(4deg); }
 .card-inner.c4 { background:#c8773a; color:#2a1800; transform:rotate(-2deg); }
+.card-inner.c5 { background: var(--accent); color: #fff; transform: rotate(2deg); } /* اللون الجديد للمشروع 5 */
 
 /* ═══ عني ═══ */
 #about { min-height:100vh; background:var(--cream); color:var(--ink); display:grid; grid-template-columns:1fr 1fr; position:relative; direction:rtl; }
@@ -340,7 +344,6 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
 <div id="cursor-ring"></div>
 <div class="grain"></div>
 
-<!-- القائمة العلوية -->
 <nav>
   <a href="#hero" class="nav-logo">ز.خ</a>
   <ul class="nav-links">
@@ -352,7 +355,6 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
   </ul>
 </nav>
 
-<!-- شريط تمرير سفلي -->
 <div class="marquee-strip">
   <div class="marquee-inner">
     <span class="marquee-item">صانعة محتوى</span><span class="marquee-sep">✦</span>
@@ -368,7 +370,6 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
   </div>
 </div>
 
-<!-- ════════════ الشاشة الأولى ════════════ -->
 <section id="hero">
   <div class="hero-sticky">
     <div class="blob-bg" style="width:600px;height:600px;background:var(--accent);top:-10%;right:-15%;"></div>
@@ -396,7 +397,6 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
   </div>
 </section>
 
-<!-- ════════════ الأعمال ════════════ -->
 <section id="projects">
   <div class="projects-intro">
     <div>
@@ -449,7 +449,8 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
             <span class="card-num">04</span>
           </div>
         </div>
-         <div class="project-card" style="top:0;">
+
+        <div class="project-card" style="top:0;">
           <div class="card-inner c5">
             <span class="card-tag">تعاون إبداعي</span>
             <h3 class="card-title">رحمه بتضحي عشانكوا</h3>
@@ -464,8 +465,7 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
       <div class="cards-right">
         <p class="about-eyebrow">أعمال مختارة</p>
         <h3 class="cards-right-title">ما<br>أنجزناه<br><em>معًا</em></h3>
-        <div class="cards-counter" id="cards-counter">٠١ / ٠٤</div>
-        <p style="color:var(--muted);font-size:.87rem;margin-top:1.5rem;max-width:260px;line-height:1.9;">
+        <div class="cards-counter" id="cards-counter">٠١ / ٠٥</div> <p style="color:var(--muted);font-size:.87rem;margin-top:1.5rem;max-width:260px;line-height:1.9;">
           كل مشروع يبدأ بسؤال أو فضول — وينتهي بشيء يدوم أطول من الإحاطة الإبداعية.
         </p>
       </div>
@@ -473,7 +473,6 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
   </div>
 </section>
 
-<!-- ════════════ عني ════════════ -->
 <section id="about">
   <div class="about-visual">
     <div class="about-photo-frame">
@@ -506,7 +505,6 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
   </div>
 </section>
 
-<!-- ════════════ إحصائيات ════════════ -->
 <section id="stats">
   <div class="stat-item">
     <span class="stat-num" data-target="4.2" data-suffix="م">٠</span>
@@ -526,7 +524,6 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
   </div>
 </section>
 
-<!-- ════════════ المقالات ════════════ -->
 <section id="articles">
   <div class="articles-bg-text">كتابة</div>
 
@@ -546,7 +543,6 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
 
   <div class="articles-grid" id="articles-grid">
 
-    <!-- مقال بارز ممتد -->
     <a href="#" class="article-card featured" data-cat="culture">
       <div class="article-img-wrap">
         <img class="article-card-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="جيل يبحث عن معنى" />
@@ -604,63 +600,6 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
       </div>
     </a>
 
-    <a href="#" class="article-card" data-cat="tech">
-      <div class="article-img-wrap">
-        <img class="article-card-img" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80" alt="الذكاء الاصطناعي" />
-      </div>
-      <div class="article-card-body">
-        <div class="article-meta">
-          <span class="article-cat">تقنية</span>
-          <span class="article-date">أكتوبر ٢٠٢٣</span>
-          <span class="article-read">١٠ دق قراءة</span>
-        </div>
-        <h3 class="article-title">الذكاء الاصطناعي لن يسرق وظيفتك — لكنه سيغيّر كل شيء</h3>
-        <p class="article-excerpt">المبدعون والأدوات الذكية: شراكة أم منافسة؟ وكيف أتعامل أنا مع هذا التحوّل العملاق في صناعة المحتوى.</p>
-        <div class="article-footer">
-          <span class="article-platform">منصة وَمَضة</span>
-          <span class="article-arrow">←</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="#" class="article-card" data-cat="culture">
-      <div class="article-img-wrap">
-        <img class="article-card-img" src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=600&q=80" alt="الأصالة" />
-      </div>
-      <div class="article-card-body">
-        <div class="article-meta">
-          <span class="article-cat">ثقافة</span>
-          <span class="article-date">أغسطس ٢٠٢٣</span>
-          <span class="article-read">٧ دق قراءة</span>
-        </div>
-        <h3 class="article-title">الأصالة في زمن الـ Personal Branding</h3>
-        <p class="article-excerpt">هل يمكنك أن تكون صادقًا تمامًا وتبني علامة شخصية ناجحة في الوقت ذاته؟ تأمّلات من داخل الصناعة.</p>
-        <div class="article-footer">
-          <span class="article-platform">مجلة إضاءات</span>
-          <span class="article-arrow">←</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="#" class="article-card" data-cat="creativity">
-      <div class="article-img-wrap">
-        <img class="article-card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="روتين الكتابة" />
-      </div>
-      <div class="article-card-body">
-        <div class="article-meta">
-          <span class="article-cat">إبداع</span>
-          <span class="article-date">يوليو ٢٠٢٣</span>
-          <span class="article-read">٤ دق قراءة</span>
-        </div>
-        <h3 class="article-title">روتيني الصباحي الذي غيّر طريقتي في التفكير والكتابة</h3>
-        <p class="article-excerpt">صفحات الصباح، التأمل، والمسودة الواحدة — كيف بنيت عادات الكتابة من الصفر وجعلتها تدوم.</p>
-        <div class="article-footer">
-          <span class="article-platform">مدوّنتي الشخصية</span>
-          <span class="article-arrow">←</span>
-        </div>
-      </div>
-    </a>
-
   </div>
 
   <div class="articles-cta-wrap">
@@ -668,7 +607,6 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
   </div>
 </section>
 
-<!-- ════════════ الخدمات ════════════ -->
 <section id="services">
   <div class="blob-bg" style="width:500px;height:500px;background:var(--accent2);top:10%;left:-10%;"></div>
 
@@ -695,35 +633,9 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
         <span class="service-tag">توجيه إبداعي</span>
       </div>
     </div>
-    <div class="service-row">
-      <span class="service-index">03</span>
-      <span class="service-name">الأفلام الوثائقية</span>
-      <div class="service-tags">
-        <span class="service-tag">أفلام قصيرة</span>
-        <span class="service-tag">سلاسل</span>
-      </div>
-    </div>
-    <div class="service-row">
-      <span class="service-index">04</span>
-      <span class="service-name">الكتابة التحريرية</span>
-      <div class="service-tags">
-        <span class="service-tag">مجلات</span>
-        <span class="service-tag">مقالات</span>
-        <span class="service-tag">أعمدة</span>
-      </div>
-    </div>
-    <div class="service-row">
-      <span class="service-index">05</span>
-      <span class="service-name">الاستشارات الإبداعية</span>
-      <div class="service-tags">
-        <span class="service-tag">ورش عمل</span>
-        <span class="service-tag">إرشاد وتوجيه</span>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- ════════════ آراء العملاء ════════════ -->
 <section id="testimonials">
   <div style="margin-bottom:4rem;">
     <p class="about-eyebrow" style="color:var(--accent);">كلمات مؤثرة</p>
@@ -749,79 +661,21 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
           <div class="author-info"><div class="name">رانيا خوري</div><div class="role">مديرة إبداعية، Mango MENA</div></div>
         </div>
       </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">«سلسلة "بلا فلتر" حقّقت اعترافًا كنا نحلم به منذ سنوات. زارا موهبة نادرة — تجعل الناس يشعرون بأنهم مرئيون ومسموعون حقًا.»</p>
-        <div class="testimonial-author">
-          <div class="author-avatar" style="background:#2a4a2a;">ط.ف</div>
-          <div class="author-info"><div class="name">طارق فؤاد</div><div class="role">منتج تنفيذي، ArabVision</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">«عينها التحريرية لا تُضاهى. كل إطار وكل كلمة — لا شيء عشوائي أبدًا. زارا ترفع مستوى كل من حولها بمجرد وجودها في المشروع.»</p>
-        <div class="testimonial-author">
-          <div class="author-avatar" style="background:#8a3a6e;">س.أ</div>
-          <div class="author-info"><div class="name">سارة الأمين</div><div class="role">رئيسة التحرير، فوغ عربية</div></div>
-        </div>
-      </div>
-      <!-- تكرار للتمرير المستمر -->
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">«زارا لا تصنع محتوى فحسب — بل تصنع معنى. حملتنا معها كسرت كل الأرقام القياسية التي وضعناها. تعاون استثنائي بكل المقاييس.»</p>
-        <div class="testimonial-author">
-          <div class="author-avatar" style="background:#3a6e8f;">ل.م</div>
-          <div class="author-info"><div class="name">ليلى منصور</div><div class="role">مديرة التسويق، Bloom Skincare</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">«العمل مع زارا كان كأنّ لديك مخرجة بها رؤية استثنائية. فهمت جوهر علامتنا قبل أن ننهي الموجز الإبداعي. موهبة حقيقية نادرة.»</p>
-        <div class="testimonial-author">
-          <div class="author-avatar" style="background:#c8773a;">ر.خ</div>
-          <div class="author-info"><div class="name">رانيا خوري</div><div class="role">مديرة إبداعية، Mango MENA</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">«سلسلة "بلا فلتر" حقّقت اعترافًا كنا نحلم به منذ سنوات. زارا موهبة نادرة — تجعل الناس يشعرون بأنهم مرئيون ومسموعون حقًا.»</p>
-        <div class="testimonial-author">
-          <div class="author-avatar" style="background:#2a4a2a;">ط.ف</div>
-          <div class="author-info"><div class="name">طارق فؤاد</div><div class="role">منتج تنفيذي، ArabVision</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">«عينها التحريرية لا تُضاهى. كل إطار وكل كلمة — لا شيء عشوائي أبدًا. زارا ترفع مستوى كل من حولها بمجرد وجودها في المشروع.»</p>
-        <div class="testimonial-author">
-          <div class="author-avatar" style="background:#8a3a6e;">س.أ</div>
-          <div class="author-info"><div class="name">سارة الأمين</div><div class="role">رئيسة التحرير، فوغ عربية</div></div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════ تواصل ════════════ -->
 <section id="contact">
   <div class="contact-bg-text">لنتحدّث.</div>
   <div class="contact-grid">
     <div class="contact-left">
       <p class="about-eyebrow" style="margin-bottom:1rem;">تواصل معي</p>
       <h2>لنصنع شيئًا<br><em>حقيقيًا.</em></h2>
-      <p>سواء كان لديك موجز إبداعي أو ميزانية أو مجرد فكرة جميلة — أريد أن أسمعها. أتقبّل عددًا محدودًا من المشاريع كل ربع سنة لضمان التزام إبداعي كامل.</p>
+      <p>سواء كان لديك موجز إبداعي أو ميزانية أو مجرد فكرة جميلة — أريد أن أسمعها.</p>
       <div class="contact-channels">
         <a href="mailto:hello@zarakhalil.com" class="contact-channel">
           <div class="channel-icon">✉</div>
           <div><div class="channel-label">البريد الإلكتروني</div><div class="channel-value">hello@zarakhalil.com</div></div>
-        </a>
-        <a href="#" class="contact-channel">
-          <div class="channel-icon">📸</div>
-          <div><div class="channel-label">إنستغرام</div><div class="channel-value">@zarakhalil</div></div>
-        </a>
-        <a href="#" class="contact-channel">
-          <div class="channel-icon">▶</div>
-          <div><div class="channel-label">يوتيوب</div><div class="channel-value">Zara Khalil Studio</div></div>
         </a>
       </div>
     </div>
@@ -836,14 +690,13 @@ footer { background:var(--ink); border-top:1px solid rgba(255,255,255,.08); padd
       </div>
       <div class="contact-form-group">
         <label>ما طبيعة مشروعك؟</label>
-        <textarea rows="5" placeholder="أخبريني عن رؤيتك — كلما كانت التفاصيل أكثر كان أفضل..."></textarea>
+        <textarea rows="5" placeholder="أخبريني عن رؤيتك..."></textarea>
       </div>
       <button class="contact-submit" onclick="handleSubmit(this)">إرسال الرسالة ←</button>
     </div>
   </div>
 </section>
 
-<!-- الفوتر -->
 <footer>
   <span class="footer-logo">زارا خليل.</span>
   <span class="footer-text">© ٢٠٢٤ زارا خليل. جميع الحقوق محفوظة.</span>
@@ -892,8 +745,6 @@ ScrollTrigger.create({
 // ── دخول مقدمة الأعمال ──
 gsap.fromTo('.projects-intro h2',{opacity:0,y:60},
   {scrollTrigger:{trigger:'.projects-intro',start:'top 75%'},opacity:1,y:0,duration:1.2,ease:'power3.out'});
-gsap.fromTo('.projects-intro p',{opacity:0,y:30},
-  {scrollTrigger:{trigger:'.projects-intro',start:'top 75%'},opacity:1,y:0,duration:1,delay:.3,ease:'power3.out'});
 
 // ── دخول البطاقات ──
 document.querySelectorAll('.card-inner').forEach(card=>{
@@ -902,13 +753,16 @@ document.querySelectorAll('.card-inner').forEach(card=>{
      opacity:1,y:0,scale:1,duration:.9,ease:'power3.out'});
 });
 
-// ── عداد البطاقات بالأرقام العربية ──
+// ── عداد البطاقات بالأرقام العربية (تعديل لـ 5 مشاريع) ──
 const counter=document.getElementById('cards-counter');
 const projectCards=document.querySelectorAll('.project-card');
-const arNums=['٠١','٠٢','٠٣','٠٤'];
+const arNums=['٠١','٠٢','٠٣','٠٤','٠٥']; // تمت إضافة 05
 const cardObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
-    if(e.isIntersecting){ const idx=Array.from(projectCards).indexOf(e.target); if(counter&&idx>=0) counter.textContent=arNums[idx]+' / ٠٤'; }
+    if(e.isIntersecting){ 
+        const idx=Array.from(projectCards).indexOf(e.target); 
+        if(counter&&idx>=0) counter.textContent=arNums[idx]+' / ٠٥'; // تحديث الإجمالي لـ 05
+    }
   });
 },{threshold:.5});
 projectCards.forEach(c=>cardObs.observe(c));
@@ -927,71 +781,12 @@ document.querySelectorAll('.stat-num[data-target]').forEach(el=>{
   });
 });
 
-// ── دخول المقالات ──
-gsap.fromTo('.articles-header',{opacity:0,y:40},
-  {scrollTrigger:{trigger:'#articles',start:'top 75%'},opacity:1,y:0,duration:1,ease:'power3.out'});
-document.querySelectorAll('.article-card').forEach((card,i)=>{
-  gsap.fromTo(card,{opacity:0,y:50},
-    {scrollTrigger:{trigger:card,start:'top 88%'},
-     opacity:1,y:0,duration:.85,delay:(i%3)*.1,ease:'power3.out'});
-});
-
-// ── فلترة المقالات ──
-document.querySelectorAll('.filter-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    const cat=btn.dataset.cat;
-    document.querySelectorAll('.article-card').forEach(card=>{
-      const show=cat==='all'||card.dataset.cat===cat;
-      gsap.to(card,{opacity:show?1:.12,scale:show?1:.97,duration:.3});
-      card.style.pointerEvents=show?'auto':'none';
-    });
-  });
-});
-
-// ── دخول الخدمات ──
-gsap.fromTo('.section-header',{opacity:0,y:40},
-  {scrollTrigger:{trigger:'#services',start:'top 75%'},opacity:1,y:0,duration:1,ease:'power3.out'});
-gsap.fromTo('.service-row',{opacity:0,x:40},
-  {scrollTrigger:{trigger:'#services-list',start:'top 80%'},
-   opacity:1,x:0,duration:.7,stagger:.12,ease:'power3.out'});
-document.querySelectorAll('.service-row').forEach(row=>{
-  row.addEventListener('mouseenter',()=>gsap.to(row.querySelector('.service-name'),{color:'var(--accent)',duration:.3}));
-  row.addEventListener('mouseleave',()=>gsap.to(row.querySelector('.service-name'),{color:'var(--cream)',duration:.3}));
-});
-
-// ── باراكس الصورة ──
-gsap.to('.about-photo',{
-  scrollTrigger:{trigger:'#about',start:'top bottom',end:'bottom top',scrub:1},
-  y:-60,ease:'none'
-});
-
-// ── دخول قسم عني ──
-gsap.fromTo('.about-heading',{opacity:0,y:40},
-  {scrollTrigger:{trigger:'#about',start:'top 70%'},opacity:1,y:0,duration:1,ease:'power3.out'});
-gsap.fromTo('.about-body',{opacity:0,y:30},
-  {scrollTrigger:{trigger:'#about',start:'top 70%'},opacity:1,y:0,duration:1,delay:.2,ease:'power3.out'});
-gsap.fromTo('.skills-grid',{opacity:0,y:20},
-  {scrollTrigger:{trigger:'.skills-grid',start:'top 85%'},opacity:1,y:0,duration:.8,ease:'power3.out'});
-
-// ── أزرار مغناطيسية ──
-document.querySelectorAll('.about-cta,.articles-cta,.card-link').forEach(btn=>{
-  btn.addEventListener('mousemove',e=>{
-    const r=btn.getBoundingClientRect();
-    gsap.to(btn,{x:(e.clientX-r.left-r.width/2)*.25,y:(e.clientY-r.top-r.height/2)*.25,duration:.3,ease:'power2.out'});
-  });
-  btn.addEventListener('mouseleave',()=>gsap.to(btn,{x:0,y:0,duration:.5,ease:'elastic.out(1,.5)'}));
-});
-
-// ── إرسال الرسالة ──
 function handleSubmit(btn){
   btn.textContent='جارٍ الإرسال...';
   btn.disabled=true;
   setTimeout(()=>{
     btn.textContent='تم الإرسال بنجاح ✓';
     btn.style.background='#3a8f5a';
-    setTimeout(()=>{ btn.textContent='إرسال رسالة أخرى ←'; btn.style.background=''; btn.disabled=false; },3000);
   },1200);
 }
 </script>
